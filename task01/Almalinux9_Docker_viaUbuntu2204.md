@@ -18,10 +18,6 @@ clearly we are running an x86-64 Linux system
 ```
 sudo apt update && sudo apt install htop
 ```
-- For non-Gnome Desktop environments, `gnome-terminal` must be installed. This can be performed by entering this command in terminal:
-```
-sudo apt update && sudo apt install gnome-terminal
-```
 
 ## Docker installation
 
@@ -57,15 +53,15 @@ however, you can ignore this message. If the installation ended successfully, by
 
 Once you installed Docker, you can launch it either via terminal using `systemctl --user start docker-desktop` or by looking at its tray icon if you are using a GNOME Desktop Environment. First of all, you should get the AlmaLinux9 image. This can be done opening a terminal within Docker (from the bottom-right of the Docker window) and use this command:
 ```
-docker pull Almalinux:9
+docker pull almalinux:9
 ```
 you can find the image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. Now, we want to create a new container from which launch this image. This is performed by this command:
 ```
-docker run --name AlmaLinux AlmaLinux:9
+docker run --name almaLinux AlmaLinux:9
 ```
 then you will find it in the “Containers” section where you found “Images” before. To launch it, you can press the play button under “Actions”. In this same section, you can open a terminal and verify we are actually using an AlmaLinux distribution entering:
 ```
-cat \etc\os-release
+cat /etc/os-release
 ```
 that will give an output like this:
 ```
