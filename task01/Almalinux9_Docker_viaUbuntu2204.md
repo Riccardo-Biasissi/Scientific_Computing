@@ -5,7 +5,7 @@ Docker is a powerful containerization platform that allows developers to package
 ## Minimum requirements
 
 In order to install Docker, ensure the minimum requirements are met by your machine:
-- Have an x86-64 system with Ubuntu 22.04, 24.04, or the latest non-LTS version. You can recover this information by entering this command in the terminal:
+- Have an x86-64 system with Ubuntu 22.04, 24.04, or the latest non-LTS version. To recover such information, enter this command in the terminal:
 ```
 uname -a
 ```
@@ -18,6 +18,7 @@ clearly we are running an x86-64 Linux system
 ```
 sudo apt install htop
 ```
+- Verify to have admin privileges
 
 ## Docker installation
 
@@ -81,7 +82,9 @@ To create a new container in which launch our AlmaLinux9 image image, run this c
 ```
 docker run --name almaLinux_container AlmaLinux:9
 ```
-you will find this container in the “Containers” section in the previously mentioned sidebar menu. Click on the “Containers” to see a list of all containers. To launch our `almalinux_container`, press the play button under “Actions”. Next to it, there is an option button from which you can open a terminal. You can verify we are actually using an AlmaLinux distribution by entering in its terminal:
+you will find this container in the “Containers” section in the previously mentioned sidebar menu. Click on the “Containers” to see a list of all containers. To launch the freshly created `almalinux_container`, press the play button under “Actions”. Next to it, there is an option button from which you can open a terminal. 
+
+Verify we are actually using an AlmaLinux distribution by entering in its terminal:
 ```
 cat /etc/os-release
 ```
