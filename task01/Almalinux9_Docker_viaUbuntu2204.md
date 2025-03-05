@@ -57,7 +57,7 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.
 sudo apt-get update
 ```
 
-### Step 2 - Download and install the Docker DEB package
+### Step 2 - Download and install the Docker `.deb` package
 
 Download the Docker Desktop `.deb` package from the official Docker website: browse to `https://docs.docker.com/desktop/` website and, from the sidebar menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. From here, reach the “Install Docker Desktop” section and download the DEB package (see image). 
 
