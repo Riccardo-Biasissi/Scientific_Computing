@@ -2,7 +2,7 @@
 
 Docker is a powerful containerization platform that allows developers to package applications and their dependencies in lightweight and portable containers. These containers ensure consistency across different environments, making the application deployment more efficient and reliable. This guide focuses on installing AlmaLinux 9 in a Docker containers. AlmaLinux is a community-oriented enterprise-grade Linux distribution that derives from . We will guide you through the configuration of Docker and AlmaLinux 9 on Ubuntu 22.04 LTS system, ensuring smooth and practical experience. All the commands and shortcut reported in this guide, refers to an Ubuntu 22.04 LTS OS version.
 
-## Verify minimum requirements
+## Minimum requirements
 
 In order to install Docker, ensure the minimum requirements are met by your machine:
 - Have an x86-64 system with Ubuntu 22.04, 24.04, or the latest non-LTS version. You can recover this information by entering this command in the terminal (`CTRL+ALT+T` to open it):
@@ -21,7 +21,7 @@ sudo apt update && sudo apt install htop
 
 ## Docker installation
 
-### Set up Docker's package repository 
+### Step 1 - Set up Docker's package repository 
 
 When installing Docker for the first time on a new host machine, we have to set up the Docker `apt` repository to ensure that we will install and update Docker from the official package source. This can be done using these commands:
 ```
@@ -35,7 +35,7 @@ sudo apt-get update
 ```
 they, respectively, refresh the list of available packages, install `ca-certificates` and `curl` packages, creates an `/etc/apt/keyrings/` directory with proper permissions, add Docker official GPG key, set up proper key permissions, add Docker official repository and update the package list again.
 
-### Download the Docker DEB package and install it
+### Step 2 - Download the Docker DEB package and install it
 
 To do this, browse to `https://docs.docker.com/desktop/` website. From the sidebar menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. From here, reach the “Install Docker Desktop” section and download the DEB package linked in step 2. In this way, you will have a `~/Downloads/docker-desktop-amd64.deb` file. Then proceeds with its installation:
 ```
@@ -49,17 +49,23 @@ N: Download is performed unsandboxed as root, as file '/home/user/Downloads/dock
 ```
 however, you can ignore this message. If the installation ended successfully, by giving the command `docker --version` you should see the installed version of Docker (`Docker version XX.X.X, build XXXX`).
 
-### Run AlmaLinux9 in a custom container
+## AlmaLinux9 installation
+
+### Step 1 - Download the AlmaLinux9 image
 
 Once you installed Docker, you can launch it either via terminal using `systemctl --user start docker-desktop` or by looking at its tray icon if you are using a GNOME Desktop Environment. First of all, you should get the AlmaLinux9 image. This can be done opening a terminal within Docker (from the bottom-right of the Docker window) and use this command:
 ```
 docker pull almalinux:9
 ```
-you can find the image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. Now, we want to create a new container from which launch this image. This is performed by this command:
+you can find the image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. 
+
+### Step 2 - Create a new container
+
+To create a new container in which launch this image, you can run this command:
 ```
 docker run --name almaLinux AlmaLinux:9
 ```
-then you will find it in the “Containers” section where you found “Images” before. To launch it, you can press the play button under “Actions”. In this same section, you can open a terminal and verify we are actually using an AlmaLinux distribution entering:
+then you will find it in the “Containers” section in the usual sidebar menu mentioned before. To launch it, you can press the play button under “Actions”. In this same section, you can open a terminal and verify we are actually using an AlmaLinux distribution entering:
 ```
 cat /etc/os-release
 ```
