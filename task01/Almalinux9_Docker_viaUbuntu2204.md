@@ -1,6 +1,6 @@
 # Installation of Docker and AlmaLinux9 on Ubuntu 22.04 LTS
 
-Docker is a powerful containerization platform that allows developers to package applications and their dependencies in lightweight and portable containers. These containers ensure consistency across different environments, making the application deployment more efficient and reliable. This guide focuses on installing AlmaLinux 9 in a Docker containers. AlmaLinux is a community-oriented enterprise-grade Linux distribution that derives from . We will guide you through the configuration of Docker and AlmaLinux 9 on Ubuntu 22.04 LTS system. All the commands reported in this guide, refers to an Ubuntu 22.04 LTS OS version.
+Docker is a powerful containerization platform that allows developers to package applications and their dependencies in lightweight and portable containers. These containers provide a consistent environment, streamlining application deployment and improving reliability. This guide focuses on installing AlmaLinux 9 in a Docker containers. AlmaLinux is a community-oriented enterprise-grade Linux distribution that derives from . We will guide you through the configuration of Docker and AlmaLinux 9 on Ubuntu 22.04 LTS system. All the commands reported in this guide, refers to an Ubuntu 22.04 LTS.
 
 ## Minimum requirements
 
@@ -14,11 +14,19 @@ the output will be in the form:
 Linux PC_name kernel_version build_version SMP kernel_compulation_date x86_64 x86_64 x86_64 GNU/Linux
 ```
 clearly we are running an x86-64 Linux system
-- Have at least 4GB of RAM. You can enter the `htop` command to open an interactive window that displays several informations, including the RAM memory amount. To exit it, you can press `F10`. In the eventuality that `htop` is not installed, you can add it to your system using:
+- Ensure your system has at least 4GB of RAM. To check, use:
+```
+free -h
+```
+alternatively, if htop is installed, you can use:
+```
+htop
+```
+which open an interactive window that displays several informations, including the RAM memory amount. To exit this interactive window, press `F10`. If htop is not installed, install it with:
 ```
 sudo apt install htop
 ```
-- Verify to have admin privileges
+- Ensure to have administrative privileges
 
 ## Docker installation
 
@@ -38,11 +46,11 @@ they, respectively, refresh the list of available packages, install `ca-certific
 
 ### Step 2 - Download and install the Docker DEB package
 
-To download the installation file, browse to `https://docs.docker.com/desktop/` website. From the sidebar menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. From here, reach the “Install Docker Desktop” section and download the DEB package (link reported in step 2, see image). 
+Download the Docker Desktop `.deb` package from the official Docker website: browse to `https://docs.docker.com/desktop/` website and, from the sidebar menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. From here, reach the “Install Docker Desktop” section and download the DEB package (see image). 
 
 ![ezcv logo](https://github.com/Riccardo-Biasissi/Scientific_Computing/blob/main/task01/images/download_deb.png)
 
-In this way, you will have a `docker-desktop-amd64.deb` file in the `~/Downloads/` directory. To proceed with its installation, enter this command in the terminal:
+In this way, you will download the `docker-desktop-amd64.deb` file in `~/Downloads/` directory. To proceed with its installation, enter this command in the terminal:
 ```
 sudo apt-get install ./Downloads/docker-desktop-amd64.deb
 ```
@@ -78,7 +86,7 @@ this will download the AlmaLinux9 image. You will find the downloaded image in t
 
 ### Step 2 - Create a new container
 
-To create a new container in which launch our AlmaLinux9 image image, run this command:
+Create a new container in which launch our AlmaLinux9 image, run this command:
 ```
 docker run --name almaLinux_container AlmaLinux:9
 ```
