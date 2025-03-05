@@ -37,9 +37,19 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
-they, in order, refresh the list of available packages, install `ca-certificates` and `curl` packages, creates an `/etc/apt/keyrings/` directory with proper permissions, add Docker official GPG key, set up proper key permissions, add Docker official repository and update the package list again.
+they, respectively, refresh the list of available packages, install `ca-certificates` and `curl` packages, creates an `/etc/apt/keyrings/` directory with proper permissions, add Docker official GPG key, set up proper key permissions, add Docker official repository and update the package list again.
 
-Download the `.deb` package for our reference OS. Browse to `https://www.docker.com/products/docker-desktop/` and select “Download for Linux”
+### Download the Docker DEB package and install it
 
+To do this, browse to `https://docs.docker.com/desktop/` website. From the drop-down menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. 
+![alt text](https://github.com/Riccardo-Biasissi/Scientific_Computing/blob/main/task01/images/download.png)
 
+From here, reach the “Install Docker Desktop” section and download the DEB package linked in step 2. 
+![alt text](https://github.com/Riccardo-Biasissi/Scientific_Computing/blob/main/task01/images/download_deb.png)
+
+In this way, you will have a `~/Downloads/docker-desktop-amd64.deb` file. Then proceeds with its installation:
+```
+sudo apt-get update
+sudo apt-get install ./Downloads/docker-desktop-amd64.deb
+```
 
