@@ -7,7 +7,7 @@ Docker is a powerful containerization platform that allows developers to package
 In order to install Docker, ensure the minimum requirements are met by your machine:
 - Have an x86-64 system with Ubuntu 22.04, 24.04, or the latest non-LTS version. You can recover this information by entering this command in the terminal (`CTRL+ALT+T` to open it):
 ```
-$ uname -a
+uname -a
 ```
 the output will be in the form:
 ```
