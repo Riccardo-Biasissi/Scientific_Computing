@@ -1,4 +1,4 @@
-# Installation of Docker and Almalinux9 on Ubuntu 22.04 LTS
+# Installation of Docker and AlmaLinux9 on Ubuntu 22.04 LTS
 
 Docker is a powerful containerization platform that allows developers to package applications and their dependencies in lightweight and portable containers. These containers ensure consistency across different environments, making the application deployment more efficient and reliable. This guide focuses on installing AlmaLinux 9 in a Docker containers. AlmaLinux is a community-oriented enterprise-grade Linux distribution that derives from . We will guide you through the configuration of Docker and AlmaLinux 9 on Ubuntu 22.04 LTS system, ensuring smooth and practical experience. All the commands and shortcut reported in this guide, refers to an Ubuntu 22.04 LTS OS version.
 
@@ -41,15 +41,38 @@ they, respectively, refresh the list of available packages, install `ca-certific
 
 ### Download the Docker DEB package and install it
 
-To do this, browse to `https://docs.docker.com/desktop/` website. From the drop-down menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. 
-![alt text](https://github.com/Riccardo-Biasissi/Scientific_Computing/blob/main/task01/images/download.png)
-
-From here, reach the “Install Docker Desktop” section and download the DEB package linked in step 2. 
-![alt text](https://github.com/Riccardo-Biasissi/Scientific_Computing/blob/main/task01/images/download_deb.png)
-
-In this way, you will have a `~/Downloads/docker-desktop-amd64.deb` file. Then proceeds with its installation:
+To do this, browse to `https://docs.docker.com/desktop/` website. From the sidebar menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. From here, reach the “Install Docker Desktop” section and download the DEB package linked in step 2. In this way, you will have a `~/Downloads/docker-desktop-amd64.deb` file. Then proceeds with its installation:
 ```
 sudo apt-get update
 sudo apt-get install ./Downloads/docker-desktop-amd64.deb
 ```
 
+Note that, at the end of installation, an error may show up:
+```
+N: Download is performed unsandboxed as root, as file '/home/user/Downloads/docker-desktop.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
+```
+however, you can ignore this message. If the installation ended successfully, by giving the command `docker --version` you should see the installed version of Docker (`Docker version XX.X.X, build XXXX`).
+
+### Run AlmaLinux9 in a custom container
+
+Once you installed Docker, you can launch it either via terminal using `systemctl --user start docker-desktop` or by looking at its tray icon if you are using a GNOME Desktop Environment. First of all, you should get the AlmaLinux9 image. This can be done opening a terminal within Docker (from the bottom-right of the Docker window) and use this command:
+```
+docker pull Almalinux:9
+```
+you can find the image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. Now, we want to create a new container from which launch this image. This is performed by this command:
+```
+docker run --name AlmaLinux AlmaLinux:9
+```
+then you will find it in the “Containers” section where you found “Images” before. To launch it, you can press the play button under “Actions”. In this same section, you can open a terminal and verify we are actually using an AlmaLinux distribution entering:
+```
+cat \etc\os-release
+```
+that will give an output like this:
+```
+NAME="AlmaLinux"
+VERSION="9.5 (Teal Serval)"
+```
+
+To stop the container, you can press the stop button on the top-right corner of the Docker window. 
+
+Now you are running AlmaLinux 9 via Docker!
