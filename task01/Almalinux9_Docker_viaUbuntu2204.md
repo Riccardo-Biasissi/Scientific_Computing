@@ -5,7 +5,7 @@ Docker is a powerful containerization platform that allows developers to package
 ## Minimum requirements
 
 In order to install Docker, ensure the minimum requirements are met by your machine:
-- Have an x86-64 system with Ubuntu 22.04, 24.04, or the latest non-LTS version. To recover such information, enter this command in the terminal:
+- Be running an x86-64 system with Ubuntu 22.04, 24.04, or the latest non-LTS version. To recover such information, enter this command in the terminal:
 ```
 uname -a
 ```
@@ -30,19 +30,32 @@ sudo apt install htop
 
 ## Docker installation
 
-### Step 1 - Set up Docker's package repository 
+### Step 1 - Set up Docker package repository 
 
-When installing Docker for the first time on a new host machine, we have to set up the Docker `apt` repository to ensure that we will install and update Docker from the official package source. This can be done using these commands:
+When installing Docker for the first time on a new host machine, we have to set up the Docker `apt` repository to ensure that we will install and update Docker from the official package source:
+
+- Update the package list and install prerequisites:
 ```
 sudo apt-get update
 sudo apt-get install ca-certificates curl
+```
+- Create the /etc/apt/keyrings/ directory with correct permissions:
+```
 sudo install -m 0755 -d /etc/apt/keyrings
+```
+- Download and add Docker’s `GPG` key:
+```
 sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+```
+- Set correct permissions for the `GPG` key:
+```
 sudo chmod a+r /etc/apt/keyrings/docker.asc
+```
+- Add the Docker repository to `apt` sources and update the package list again to include it:
+```
 echo "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
 sudo apt-get update
 ```
-they, respectively, refresh the list of available packages, install `ca-certificates` and `curl` packages, creates an `/etc/apt/keyrings/` directory with proper permissions, add Docker official GPG key, set up proper key permissions, add Docker official repository and update the package list again.
 
 ### Step 2 - Download and install the Docker DEB package
 
