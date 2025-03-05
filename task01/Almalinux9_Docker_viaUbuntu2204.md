@@ -1,6 +1,6 @@
-# Installation of Docker and AlmaLinux9 on Ubuntu 22.04 LTS
+# Installation of Docker and AlmaLinux 9 on Ubuntu 22.04 LTS
 
-Docker is a powerful containerization platform that allows developers to package applications and their dependencies in lightweight and portable containers. These containers provide a consistent environment, streamlining application deployment and improving reliability. This guide focuses on installing AlmaLinux 9 in a Docker containers. AlmaLinux is a community-oriented enterprise-grade Linux distribution that derives from . We will guide you through the configuration of Docker and AlmaLinux 9 on Ubuntu 22.04 LTS system. All the commands reported in this guide, refers to an Ubuntu 22.04 LTS.
+Docker is a powerful containerization platform that allows developers to package applications and their dependencies in lightweight and portable containers. These containers provide a consistent environment, streamlining application deployment and improving reliability. This guide focuses on installing AlmaLinux 9 in a Docker container. AlmaLinux is a community-oriented enterprise-grade Linux distribution that derives from . We will guide you through the configuration of Docker and AlmaLinux 9 on Ubuntu 22.04 LTS system. All the commands reported in this guide, refers to an Ubuntu 22.04 LTS.
 
 ## Minimum requirements
 
@@ -13,7 +13,7 @@ the output will be in the form:
 ```
 Linux PC_name kernel_version build_version SMP kernel_compulation_date x86_64 x86_64 x86_64 GNU/Linux
 ```
-clearly we are running an x86-64 Linux system
+this confirms that the system is x86-64
 - Ensure your system has at least 4GB of RAM. To check, use:
 ```
 free -h
@@ -26,7 +26,11 @@ which open an interactive window that displays several informations, including t
 ```
 sudo apt install htop
 ```
-- Ensure to have administrative privileges
+- Verify you have sudo access (administrative privileges) by running:
+```
+sudo -v
+```
+if this command runs without errors, you have the necessary permissions
 
 ## Docker installation
 
@@ -72,7 +76,7 @@ Note that, at the end of installation, an error may show up:
 ```
 N: Download is performed unsandboxed as root, as file '/home/user/Downloads/docker-desktop.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
 ```
-however, you can ignore this message since it does not interfere with the installation. You can check whether or not the installation ended successfully, by using the command:
+however, you can ignore this message since it does not interfere with the installation. Check whether or not the installation ended successfully, by using the command:
 ```
 docker --version
 ```
@@ -87,19 +91,19 @@ systemctl --user start docker-desktop
 ```
 or by clicking at its tray icon if you are using a GNOME Desktop Environment (if you want to use this option remember to install the desktop environment with `sudo apt install gnome-terminal` command). 
 
-## AlmaLinux9 installation
+## AlmaLinux 9 installation
 
-### Step 1 - Download the AlmaLinux9 image
+### Step 1 - Download the AlmaLinux 9 image
 
 Open a terminal within Docker from the bottom-right of the Docker window and use this command:
 ```
 docker pull almalinux:9
 ```
-this will download the AlmaLinux9 image. You will find the downloaded image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. 
+this will download the AlmaLinux 9 image. You will find the downloaded image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. 
 
 ### Step 2 - Create a new container
 
-Create a new container in which launch our AlmaLinux9 image, run this command:
+Create a new container in which launch our AlmaLinux 9 image, run this command:
 ```
 docker run --name almaLinux_container AlmaLinux:9
 ```
@@ -117,6 +121,6 @@ VERSION="9.5 (Teal Serval)"
 ...
 ```
 
-To stop the container, you can press the stop button on the top-right corner of the Docker window. 
+To stop the container, click the Stop button in the top-right corner of the Docker window.
 
 Congratulations, you are running AlmaLinux 9 via Docker!
