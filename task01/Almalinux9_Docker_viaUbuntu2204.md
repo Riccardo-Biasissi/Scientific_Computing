@@ -14,9 +14,9 @@ the output will be in the form:
 Linux PC_name kernel_version build_version SMP kernel_compulation_date x86_64 x86_64 x86_64 GNU/Linux
 ```
 clearly we are running an x86-64 Linux system
-- Have at least 4GB of RAM. You can enter the `htop` command to open and interactive window that displays several informations, including the RAM memory amount. In the eventuality that `htop` is not installed, you can add it to your system using:
+- Have at least 4GB of RAM. You can enter the `htop` command to open an interactive window that displays several informations, including the RAM memory amount. To exit it, you can press `F10`. In the eventuality that `htop` is not installed, you can add it to your system using:
 ```
-sudo apt update && sudo apt install htop
+sudo apt install htop
 ```
 
 ## Docker installation
@@ -35,11 +35,14 @@ sudo apt-get update
 ```
 they, respectively, refresh the list of available packages, install `ca-certificates` and `curl` packages, creates an `/etc/apt/keyrings/` directory with proper permissions, add Docker official GPG key, set up proper key permissions, add Docker official repository and update the package list again.
 
-### Step 2 - Download the Docker DEB package and install it
+### Step 2 - Download and install the Docker DEB package
 
-To do this, browse to `https://docs.docker.com/desktop/` website. From the sidebar menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. From here, reach the “Install Docker Desktop” section and download the DEB package linked in step 2. In this way, you will have a `~/Downloads/docker-desktop-amd64.deb` file. Then proceeds with its installation:
+To download the installation file, browse to `https://docs.docker.com/desktop/` website. From the sidebar menu on the left, navigate to `Products`>`Docker desktop`>`Setup`>`Install`>`Linux`>`Ubuntu`. From here, reach the “Install Docker Desktop” section and download the DEB package (link reported in step 2, see image). 
+
+![ezcv logo](https://github.com/Riccardo-Biasissi/Scientific_Computing/blob/main/task01/images/download_deb.png)
+
+In this way, you will have a `docker-desktop-amd64.deb` file in the `~/Downloads/` directory. To proceed with its installation, enter this command in the terminal:
 ```
-sudo apt-get update
 sudo apt-get install ./Downloads/docker-desktop-amd64.deb
 ```
 
@@ -47,25 +50,38 @@ Note that, at the end of installation, an error may show up:
 ```
 N: Download is performed unsandboxed as root, as file '/home/user/Downloads/docker-desktop.deb' couldn't be accessed by user '_apt'. - pkgAcquire::Run (13: Permission denied)
 ```
-however, you can ignore this message. If the installation ended successfully, by giving the command `docker --version` you should see the installed version of Docker (`Docker version XX.X.X, build XXXX`).
+however, you can ignore this message since it does not interfere with the installation. You can check whether or not the installation ended successfully, by using the command:
+```
+docker --version
+```
+in which case, you should see the installed version of Docker:
+```
+Docker version XX.X.X, build XXXX
+```
+
+Once Docker has been installed, you can launch it either via terminal:
+```
+systemctl --user start docker-desktop
+```
+or by clicking at its tray icon if you are using a GNOME Desktop Environment (if you want to use this option remember to install the desktop environment with `sudo apt install gnome-terminal` command). 
 
 ## AlmaLinux9 installation
 
 ### Step 1 - Download the AlmaLinux9 image
 
-Once you installed Docker, you can launch it either via terminal using `systemctl --user start docker-desktop` or by looking at its tray icon if you are using a GNOME Desktop Environment. First of all, you should get the AlmaLinux9 image. This can be done opening a terminal within Docker (from the bottom-right of the Docker window) and use this command:
+Open a terminal within Docker from the bottom-right of the Docker window and use this command:
 ```
 docker pull almalinux:9
 ```
-you can find the image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. 
+this will download the AlmaLinux9 image. You will find the downloaded image in the “Images” section of the sidebar menu on the left-hand-side of the Docker window. 
 
 ### Step 2 - Create a new container
 
-To create a new container in which launch this image, you can run this command:
+To create a new container in which launch our AlmaLinux9 image image, run this command:
 ```
-docker run --name almaLinux AlmaLinux:9
+docker run --name almaLinux_container AlmaLinux:9
 ```
-then you will find it in the “Containers” section in the usual sidebar menu mentioned before. To launch it, you can press the play button under “Actions”. In this same section, you can open a terminal and verify we are actually using an AlmaLinux distribution entering:
+you will find this container in the “Containers” section in the previously mentioned sidebar menu. Click on the “Containers” to see a list of all containers. To launch our `almalinux_container`, press the play button under “Actions”. Next to it, there is an option button from which you can open a terminal. You can verify we are actually using an AlmaLinux distribution by entering:
 ```
 cat /etc/os-release
 ```
@@ -73,8 +89,10 @@ that will give an output like this:
 ```
 NAME="AlmaLinux"
 VERSION="9.5 (Teal Serval)"
+...
+...
 ```
 
 To stop the container, you can press the stop button on the top-right corner of the Docker window. 
 
-Now you are running AlmaLinux 9 via Docker!
+Congratulations, you are running AlmaLinux 9 via Docker!
