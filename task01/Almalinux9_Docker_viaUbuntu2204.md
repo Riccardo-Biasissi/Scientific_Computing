@@ -1,1 +1,3 @@
 # Installation of Docker and Almalinux9 on Ubuntu 22.04 LTS
+
+Docker is a powerful containerization platform that allows developers to package applications and their dependenciesin lightweight andportable containers. These containers ensure consistency across different environments, makingtheapplication deployment more efficient and reliable.This guide focuseson installing AlmaLinux 9inDockercontainers.AlmaLinux is acommunity-orientedenterprise-grade Linux distribution thatfunctionsas areliablealternative to CentOS.Wewillguideyou throughthe configuration ofDocker andthe operation ofAlmaLinux 9 on Ubuntu 22.04 LTS system, ensuring smooth and practical experience.
