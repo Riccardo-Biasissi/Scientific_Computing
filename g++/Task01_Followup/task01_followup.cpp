@@ -46,7 +46,9 @@ int main() {
     for (const auto& value : z) {
         outputFile << value << std::endl;
     }
+    // Close the file
     outputFile.close();
 
+    // Return 0 to indicate the program has ended successfully
     return 0;
 }
