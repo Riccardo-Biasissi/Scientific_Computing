@@ -1,7 +1,7 @@
 # Measure the execution time for comparison with compiled language (C++)
 @time begin
     # Define the dimensions
-    N = 10
+    N = 10000
     N = Int(N)
 
     # Create matrices A and B
@@ -10,8 +10,6 @@
 
     # Perform the multiplication
     C = A*B/N
-
-    println("Matrix C: ", C)
 
     # Define the expected value and tolerance
     expected_value = 21.3
