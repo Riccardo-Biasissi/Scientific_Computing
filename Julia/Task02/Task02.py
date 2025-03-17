@@ -5,7 +5,7 @@ start = time.time()
 
 # Define the scalar and vectors
 a = 3.0
-N = 1e6  # You can change N to any desired dimension
+N = 1e8  # You can change N to any desired dimension
 N = int(N)
 x = np.zeros(N) + 0.1
 y = np.zeros(N) + 7.1
