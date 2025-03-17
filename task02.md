@@ -176,8 +176,11 @@ int main() {
 ## Point b
 
 - I did not encounter problems in the tasks assigned. However, the expression of point 3 puzzled me a bit: we were asked to compute the multiplication of two matrices $A$ (filled with $3.0$) and $B$ (filled with $7.1$) in order to recover matrix $C$ such that:
+
 $$c_{ij} = \sum_{k}{a_{ik} \cdot b_{kj}}$$
+
 but this computation results in differents values from those we were asked to check (21.3). For example, for dimension N=2, the resulting C matrix will be filled with 42.6. The only way to correct the results would have been to perform this computation instead:
+
 $$c_{ij} = \frac{1}{N} \sum_{k}{a_{ik} \cdot b_{kj}}$$
 
 In the end, I believed that the task revolved in computing just the element-wise multiplication (in other words, $A_{i,j} \cdot B_{i,j}$) since this does not require the 1/N factor.
