@@ -9,7 +9,7 @@
     B = fill(7.1, N, N)
 
     # Perform the multiplication
-    C = A*B/N
+    C = A .* B
 
     # Define the expected value and tolerance
     expected_value = 21.3

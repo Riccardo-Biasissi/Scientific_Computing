@@ -1,7 +1,7 @@
 # Measure the execution time for comparison with compiled language (C++)
 @time begin
     # Define the dimensions
-    N = 1e6
+    N = 1e8
     N = Int(N)
     
     # Define the scalar and vectors
