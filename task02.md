@@ -1,12 +1,12 @@
 # Task02 assignment
 
-Markdown file regarding the task02. My selected codes are Julia and C++
+Markdown file regarding the task02. The codes I selected to delve in during this course are Julia and C++.
 
 ## Point a
 
-I performed tasks 1/2 and 3 in two separate scripts
+I performed tasks 1/2 and 3 in two separate scripts.
 
-### Julia code
+### Julia
 
 Point 1 and 2
 
@@ -65,7 +65,7 @@ Point 3
 end
 ```
 
-### C++ code
+### C++
 
 Point 1 and 2
 
@@ -137,7 +137,7 @@ int main() {
     // Start measuring time
     auto start = std::chrono::high_resolution_clock::now();
 
-    // Compute the matrix C = A .* B (element-wise multiplication)
+    // Compute the matrix C = A * B (element-wise multiplication)
     for (int i = 0; i < N; ++i) {
         for (int j = 0; j < N; ++j) {
             C[i][j] = A[i][j] * B[i][j];
@@ -175,11 +175,16 @@ int main() {
 
 ## Point b
 
-- I did not encounter any problems in the tasks assigned. However, the expression of point 3 puzzled me a bit: we were asked to compute the multiplication of two matrices A (filled with 3.0) and B (filled with 7.1) as:
-$$c_{ij} = sum_{k}{a_{ik} \cdot b_{kj}}$$
+- I did not encounter problems in the tasks assigned. However, the expression of point 3 puzzled me a bit: we were asked to compute the multiplication of two matrices $A$ (filled with $3.0$) and $B$ (filled with $7.1$) in order to recover matrix $C$ such that:
+$$c_{ij} = \sum_{k}{a_{ik} \cdot b_{kj}}$$
 but this computation results in differents values from those we were asked to check (21.3). For example, for dimension N=2, the resulting C matrix will be filled with 42.6. The only way to correct the results would have been to perform this computation instead:
-$$c_{ij} = \frac{1}{N} sum_{k}{a_{ik} \cdot b_{kj}}$$
+$$c_{ij} = \frac{1}{N} \sum_{k}{a_{ik} \cdot b_{kj}}$$
 
-In the end, I thought that maybe the task was just to compute the multiplication of each (i,j) element of matrix A with each (i,j) element of matrix B since this does not require the factor 1/N.
+In the end, I believed that the task revolved in computing just the element-wise multiplication (in other words, $A_{i,j} \cdot B_{i,j}$) since this does not require the 1/N factor.
 
-- I was able to correctly check the results. The resulting vector d and matrix C are affected by floating point, the way I used to surprass this limit is to check the value within an arbitrary tolerance (in my code, 1e-3 proved to be small enough). 
+- I was able to correctly check the results. The resulting vector d and matrix C are affected by floating point limit. The way I used to surprass this constraint, is to verify the computed $R_c$ and theoretical $R_t$ results within an arbitrary tolerance $T$ (in my code, 1e-3 proved to be small enough). The condition I used in the verification is:
+$$|R_c - R_t| < T$$
+
+## Computation times
+
+I compared the execution times for the scripts in Julia and C++. For the tasks 1 and 2 (N=1e8), Julia required around 0.60-1.00s while C++ took consistently 0.52-0.54s. Regarding the task 3 (N=1e4) the computation times were 0.60-0.75s for Julia and 0.88-0.90s for C++ (clearly there is space for large improvements in my code regarding task 3!).
