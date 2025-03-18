@@ -186,6 +186,7 @@ $$c_{ij} = \frac{1}{N} \sum_{k}{a_{ik} \cdot b_{kj}}$$
 In the end, I believed that the task revolved in computing just the element-wise multiplication (in other words, $A_{i,j} \cdot B_{i,j}$) since this does not require the 1/N factor.
 
 - I was able to correctly check the results. The resulting vector d and matrix C are affected by floating point limit. The way I used to surprass this constraint, is to verify the computed $R_c$ and theoretical $R_t$ results within an arbitrary tolerance $T$ (in my code, 1e-3 proved to be small enough). The condition I used in the verification is:
+
 $$|R_c - R_t| < T$$
 
 ## Computation times
