@@ -1,6 +1,13 @@
 # Compiler
-CXX = g++								# g++ for C++ programs
-CXXFLAGS = -Wall -Wextra -O2 -std=c++17 # -O2 for optimization, -std=c++17 for C++17 standard, -Wall -Wextra for warnings
+CXX = g++
+
+# for optimization, -std=c++17 for C++17 standard, -Wall -Wextra for warnings
+# the -I flag is used to include the hdf5 header files (hdf5/include)
+CXXFLAGS = -Wall -Wextra -std=c++17 -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include/
+
+# the -L flag is used to include the hdf5 library files (hdf5/lib)
+# the -lhdf5 flag is used to link the hdf5 library as well as the gsl libraries	
+LDFLAGS = -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -lhdf5 -lgsl -lgslcblas
 
 # Targets to be compiled
 TARGETS = task03_1 task03_2
@@ -9,10 +16,10 @@ TARGETS = task03_1 task03_2
 all: $(TARGETS)
 
 # Pattern rule to compile each target
-# $@: target name (what is on left side of ":")
-# $<: first dependency (what is on right side of ":")
+# $@: target name (aka the final task file or what is on left side of ":")
+# $<: first dependency (aka the input .cpp file or what is on right side of ":")
 %: %.cpp
-	$(CXX) $(CXXFLAGS) -o $@ $<
+	$(CXX) $(CXXFLAGS) -o $@ $< $(LDFLAGS)
 
 # Clean rule (delete all compiled targets)
 clean:
