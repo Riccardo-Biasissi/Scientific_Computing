@@ -1,0 +1,18 @@
+{
+    "configurations": [
+        {
+            "name": "Linux",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include/", // Add this line for HDF5 include path
+                "/data0/biasissi/Scientific_Computing/my_libraries/gsl/include/gsl/" 
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "linux-gcc-x64"
+        }
+    ],
+    "version": 4
+}
