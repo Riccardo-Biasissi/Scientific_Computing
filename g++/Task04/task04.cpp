@@ -186,6 +186,13 @@ int main(int argc, char* argv[]) {
         return 1;
     }
 
+    // Generate linearly spaced points and compute function values
+    std::vector<double> x_values = generate_linspace(x_inf, x_sup, N);
+    std::vector<double> f_values = compute_function(x_values);
+
+    // Save the function evaluations to a file
+    save_to_file(x_values, f_values);
+
     // Compute the integral using the trapezoidal rule
     double integral_trapezoidal = compute_integral_trapezoidal(x_inf, x_sup, N);
 
@@ -203,8 +210,8 @@ int main(int argc, char* argv[]) {
     std::cout << "Trapezoidal: " << integral_trapezoidal << "\n";
     std::cout << "Simpson: " << integral_simpson << "\n";
     std::cout << "Exact (GSL): " << compute_integral_gaussian(x_inf, x_sup) << "\n";
-    std::cout << "Error (Trapezoidal): " << std::abs(integral_trapezoidal - compute_integral_gaussian(x_inf, x_sup))*100 << "% \n";
-    std::cout << "Error (Simpson): " << std::abs(integral_simpson - compute_integral_gaussian(x_inf, x_sup))*100 << "% \n";
-    
+    std::cout << "Error (Trapezoidal): " << std::abs(integral_trapezoidal - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
+    std::cout << "Error (Simpson): " << std::abs(integral_simpson - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
+
     return 0;
 }
