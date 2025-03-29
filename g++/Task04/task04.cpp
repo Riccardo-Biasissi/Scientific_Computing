@@ -138,34 +138,6 @@ bool read_config(const std::string& filename, int& N, double& x_inf, double& x_s
     return true;
 }
 
-// Function to read configuration from a file
-bool read_config(const std::string& filename, double& x_inf, double& x_sup) {
-    std::ifstream file(filename);
-    if (!file) {
-        std::cerr << "Error: Could not open config file " << filename << std::endl;
-        return false;
-    }
-
-    std::string line;
-    while (std::getline(file, line)) {
-        std::istringstream iss(line);
-        std::string key;
-        if (std::getline(iss, key, '=')) {
-            std::string value;
-            if (std::getline(iss, value)) {
-                if (key == "x_inf") {
-                    x_inf = std::stod(value);
-                } else if (key == "x_sup") {
-                    x_sup = std::stod(value);
-                }
-            }
-        }
-    }
-
-    file.close();
-    return true;
-}
-
 int main(int argc, char* argv[]) {
     if (argc != 2) {
         std::cerr << "Usage: " << argv[0] << " <config_file>" << std::endl;
@@ -205,13 +177,15 @@ int main(int argc, char* argv[]) {
     }
 
     // Print the results to the terminal
-    std::cout << std::fixed << std::setprecision(16);
-    std::cout << "Results for N = " << N << ", x_inf = " << x_inf << ", x_sup = " << x_sup << ":\n";
-    std::cout << "Trapezoidal: " << integral_trapezoidal << "\n";
-    std::cout << "Simpson: " << integral_simpson << "\n";
-    std::cout << "Exact (GSL): " << compute_integral_gaussian(x_inf, x_sup) << "\n";
-    std::cout << "Error (Trapezoidal): " << std::abs(integral_trapezoidal - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
-    std::cout << "Error (Simpson): " << std::abs(integral_simpson - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
+    std::cout << std::fixed << std::setprecision(50);
+    std::cout << "Results for N: \t\t" << N << "\n";
+    std::cout << "x_inf: \t\t\t" << x_inf << "\n";
+    std::cout << "x_sup: \t\t\t" << x_sup << "\n";
+    std::cout << "Trapezoidal: \t\t" << integral_trapezoidal << "\n";
+    std::cout << "Simpson: \t\t" << integral_simpson << "\n";
+    std::cout << "Exact (GSL): \t\t" << compute_integral_gaussian(x_inf, x_sup) << "\n";
+    std::cout << "Error (Trapezoidal): \t" << std::abs(integral_trapezoidal - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
+    std::cout << "Error (Simpson): \t" << std::abs(integral_simpson - compute_integral_gaussian(x_inf, x_sup)) * 100 << "%";
 
     return 0;
 }
