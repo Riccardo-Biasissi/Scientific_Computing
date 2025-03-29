@@ -188,7 +188,7 @@ int main() {
     output_file << std::fixed << std::setprecision(30);
 
     // List of N values
-    std::vector<int> N_values = generate_linspace_int(10,10010,5001);
+    std::vector<int> N_values = generate_linspace_int(10,10000010,1001);
 
     for (int N : N_values) {
         if (N < 2) {
