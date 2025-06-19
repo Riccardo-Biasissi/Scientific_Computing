@@ -178,7 +178,7 @@ int main(int argc, char* argv[]) {
 
     // Print the results to the terminal
     std::cout << std::fixed << std::setprecision(50);
-    std::cout << "Results for N: \t\t" << N << "\n";
+    std::cout << "Sampling N: \t\t" << N << "\n";
     std::cout << "x_inf: \t\t\t" << x_inf << "\n";
     std::cout << "x_sup: \t\t\t" << x_sup << "\n";
     std::cout << "Trapezoidal: \t\t" << integral_trapezoidal << "\n";
@@ -186,6 +186,7 @@ int main(int argc, char* argv[]) {
     std::cout << "Exact (GSL): \t\t" << compute_integral_gaussian(x_inf, x_sup) << "\n";
     std::cout << "Error (Trapezoidal): \t" << std::abs(integral_trapezoidal - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
     std::cout << "Error (Simpson): \t" << std::abs(integral_simpson - compute_integral_gaussian(x_inf, x_sup)) * 100 << "%";
+    std::cout << "\n" << std::endl;
 
     return 0;
 }
