@@ -91,18 +91,20 @@ double compute_integral_simpson(double x_inf, double x_sup, int N) {
 
 // Function to compute the integral of f(x) = e^x * cos(x) using GSL
 double compute_integral_gaussian(double x_inf, double x_sup) {
-    gsl_integration_workspace* workspace = gsl_integration_workspace_alloc(1000);
+    gsl_integration_workspace* workspace = gsl_integration_workspace_alloc(1000); // GSL requires a workspace
 
-    double result, error;
+    double result, error; // Define variables for result and error
 
-    gsl_function F;
-    F.function = [](double x, void* params) -> double {
+    gsl_function F; // Define the function to integrate, GSL requires a gsl_function struct
+    F.function = [](double x, void* params) -> double { // [](x, external_parameters) -> {f(x)} ---- this is the lambda function syntax
         return std::exp(x) * std::cos(x);
     };
-    F.params = nullptr;
+    F.params = nullptr; // No parameters needed for this function
 
-    gsl_integration_qags(&F, x_inf, x_sup, 0, 1e-7, 1000, workspace, &result, &error);
+    // Perform the integration using GSL's adaptive quadrature method, 1e-7 tolerance, 1000 subintervals
+    gsl_integration_qags(&F, x_inf, x_sup, 0, 1e-7, 1000, workspace, &result, &error); // Note the &F syntax for passing the function
 
+    // Free the workspace allocated by GSL
     gsl_integration_workspace_free(workspace);
 
     return result;
@@ -185,7 +187,9 @@ int main(int argc, char* argv[]) {
     std::cout << "Simpson: \t\t" << integral_simpson << "\n";
     std::cout << "Exact (GSL): \t\t" << compute_integral_gaussian(x_inf, x_sup) << "\n";
     std::cout << "Error (Trapezoidal): \t" << std::abs(integral_trapezoidal - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
-    std::cout << "Error (Simpson): \t" << std::abs(integral_simpson - compute_integral_gaussian(x_inf, x_sup)) * 100 << "%";
+    std::cout << integral_trapezoidal/compute_integral_gaussian(x_inf, x_sup) - 1 << "\n";
+    std::cout << "Error (Simpson): \t" << std::abs(integral_simpson - compute_integral_gaussian(x_inf, x_sup)) * 100 << "% \n";
+    std::cout << integral_simpson/compute_integral_gaussian(x_inf, x_sup) - 1 << "\n";
     std::cout << "\n" << std::endl;
 
     return 0;
