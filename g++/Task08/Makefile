@@ -2,8 +2,7 @@
 CXX = g++
 
 # Targets to be compiled
-# TARGETS = task07_xygenerator task07
-TARGETS = test_task07_xygenerator
+TARGETS = task08 task08_xygenerator
 
 # Default rule (compile all targets)
 all: $(TARGETS)

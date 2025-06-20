@@ -1,5 +1,0 @@
-filename_x=./vector_N1000_x.dat
-filename_y=./vector_N1000_y.dat
-N=1000
-a=1.0
-prefix_output=./vector_

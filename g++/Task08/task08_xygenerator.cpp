@@ -59,12 +59,3 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
-
-//*-------------------- Example of usage --------------------*//
-
-// To use this code you can run the following commands in the terminal
-// g++ task03_1.cpp -o task03
-// ./task03 10 vector_
-//
-// This will generate two files vector_N10_x.dat and vector_N10_y.dat
-// with the vectors x and y filled with 0.1 and 7.1 respectively

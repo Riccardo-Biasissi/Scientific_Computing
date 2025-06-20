@@ -1,0 +1,5 @@
+filename_x=./vector_N100_x.dat
+filename_y=./vector_N100_y.dat
+N=100
+a=1.0
+prefix_output=./vector_
