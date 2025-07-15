@@ -1,0 +1,178 @@
+
+---
+events:
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeDetermineSystem.cmake:205 (message)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      The system is: Linux - 5.14.0-362.18.1.el9_3.x86_64 - x86_64
+  -
+    kind: "message-v1"
+    backtrace:
+      - "/home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:17 (message)"
+      - "/home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeDetermineCompilerId.cmake:64 (__determine_compiler_id_test)"
+      - "/home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeDetermineCXXCompiler.cmake:126 (CMAKE_DETERMINE_COMPILER_ID)"
+      - "CMakeLists.txt:6 (project)"
+    message: |
+      Compiling the CXX compiler identification source file "CMakeCXXCompilerId.cpp" succeeded.
+      Compiler: /usr/bin/c++ 
+      Build flags: -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include;-I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include;-I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include;-I/
+      Id flags:  
+      
+      The output was:
+      0
+      
+      
+      Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "a.out"
+      
+      The CXX compiler identification is GNU, found in:
+        /data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/4.0.0/CompilerIdCXX/a.out
+      
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeDetermineCompilerABI.cmake:83 (try_compile)"
+      - "/home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:26 (CMAKE_DETERMINE_COMPILER_ABI)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Detecting CXX compiler ABI info"
+    directories:
+      source: "/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-f1bV4O"
+      binary: "/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-f1bV4O"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I/"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -lhdf5 -lgsl -lgslcblas -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -lfftw3"
+    buildResult:
+      variable: "CMAKE_CXX_ABI_COMPILED"
+      cached: true
+      stdout: |
+        Change Dir: '/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-f1bV4O'
+        
+        Run Build Command(s): /home/biasissi/miniconda/envs/main/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_4bdf8/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_4bdf8.dir/build.make CMakeFiles/cmTC_4bdf8.dir/build
+        gmake[1]: Entering directory '/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-f1bV4O'
+        Building CXX object CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o
+        /usr/bin/c++   -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I/    -v -o CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o -c /home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugs.almalinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-2) (GCC) 
+        COLLECT_GCC_OPTIONS='-I' '/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/gsl/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include' '-I' '/' '-v' '-o' 'CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_4bdf8.dir/'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/cc1plus -quiet -v -I /data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I /data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I /data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I / -D_GNU_SOURCE /home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_4bdf8.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mtune=generic -march=x86-64-v2 -version -o /tmp/cctcV8sH.s
+        GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-2) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-2), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/include-fixed"
+        ignoring nonexistent directory "/usr/lib/gcc/x86_64-redhat-linux/11/../../../../x86_64-redhat-linux/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/gsl/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/gsl/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/gsl/include"
+        ignoring duplicate directory "/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include"
+        #include "..." search starts here:
+        #include <...> search starts here:
+         /data0/biasissi/Scientific_Computing/my_libraries/hdf5/include
+         /data0/biasissi/Scientific_Computing/my_libraries/gsl/include
+         /data0/biasissi/Scientific_Computing/my_libraries/fftw3/include
+         /
+         .
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/x86_64-redhat-linux
+         /usr/lib/gcc/x86_64-redhat-linux/11/../../../../include/c++/11/backward
+         /usr/lib/gcc/x86_64-redhat-linux/11/include
+         /usr/local/include
+         /usr/include
+        End of search list.
+        GNU C++17 (GCC) version 11.5.0 20240719 (Red Hat 11.5.0-2) (x86_64-redhat-linux)
+        	compiled by GNU C version 11.5.0 20240719 (Red Hat 11.5.0-2), GMP version 6.2.0, MPFR version 4.1.0-p9, MPC version 1.2.1, isl version none
+        GGC heuristics: --param ggc-min-expand=100 --param ggc-min-heapsize=131072
+        Compiler executable checksum: 4bdbef27247e537be6cd8778b035421b
+        COLLECT_GCC_OPTIONS='-I' '/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/gsl/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include' '-I' '/' '-v' '-o' 'CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_4bdf8.dir/'
+         as -v -I /data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I /data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I /data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I / --64 -o CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o /tmp/cctcV8sH.s
+        GNU assembler version 2.43 (x86_64-conda-linux-gnu) using BFD version (GNU Binutils) 2.43
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib/:/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib/:/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/:/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib/:/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib/:/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/:/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib/:/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib/:/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/gsl/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include' '-I' '/' '-v' '-o' 'CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o' '-c' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_4bdf8
+        /home/biasissi/miniconda/envs/main/bin/cmake -E cmake_link_script CMakeFiles/cmTC_4bdf8.dir/link.txt --verbose=1
+        Using built-in specs.
+        COLLECT_GCC=/usr/bin/c++
+        COLLECT_LTO_WRAPPER=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper
+        OFFLOAD_TARGET_NAMES=nvptx-none
+        OFFLOAD_TARGET_DEFAULT=1
+        Target: x86_64-redhat-linux
+        Configured with: ../configure --enable-bootstrap --enable-host-pie --enable-host-bind-now --enable-languages=c,c++,fortran,lto --prefix=/usr --mandir=/usr/share/man --infodir=/usr/share/info --with-bugurl=http://bugs.almalinux.org/ --enable-shared --enable-threads=posix --enable-checking=release --with-system-zlib --enable-__cxa_atexit --disable-libunwind-exceptions --enable-gnu-unique-object --enable-linker-build-id --with-gcc-major-version-only --enable-plugin --enable-initfini-array --without-isl --enable-multilib --with-linker-hash-style=gnu --enable-offload-targets=nvptx-none --without-cuda-driver --enable-gnu-indirect-function --enable-cet --with-tune=generic --with-arch_64=x86-64-v2 --with-arch_32=x86-64 --build=x86_64-redhat-linux --with-build-config=bootstrap-lto --enable-link-serialization=1
+        Thread model: posix
+        Supported LTO compression algorithms: zlib zstd
+        gcc version 11.5.0 20240719 (Red Hat 11.5.0-2) (GCC) 
+        COMPILER_PATH=/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/11/:/usr/libexec/gcc/x86_64-redhat-linux/:/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/
+        LIBRARY_PATH=/usr/lib/gcc/x86_64-redhat-linux/11/:/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/:/lib/../lib64/:/usr/lib/../lib64/:/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib/:/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib/:/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/:/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib/:/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib/:/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/:/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib/:/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib/:/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/:./:/usr/lib/gcc/x86_64-redhat-linux/11/../../../:/lib/:/usr/lib/
+        COLLECT_GCC_OPTIONS='-I' '/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/gsl/include' '-I' '/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include' '-I' '/' '-L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib' '-L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib' '-L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib' '-v' '-o' 'cmTC_4bdf8' '-shared-libgcc' '-mtune=generic' '-march=x86-64-v2' '-dumpdir' 'cmTC_4bdf8.'
+         /usr/libexec/gcc/x86_64-redhat-linux/11/collect2 -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEhIcUx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4bdf8 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -lhdf5 -lgsl -lgslcblas -lfftw3 -v CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        collect2 version 11.5.0 20240719 (Red Hat 11.5.0-2)
+        /home/biasissi/miniconda/envs/main/bin/ld -plugin /usr/libexec/gcc/x86_64-redhat-linux/11/liblto_plugin.so -plugin-opt=/usr/libexec/gcc/x86_64-redhat-linux/11/lto-wrapper -plugin-opt=-fresolution=/tmp/ccEhIcUx.res -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc -plugin-opt=-pass-through=-lc -plugin-opt=-pass-through=-lgcc_s -plugin-opt=-pass-through=-lgcc --build-id --no-add-needed --eh-frame-hdr --hash-style=gnu -m elf_x86_64 -dynamic-linker /lib64/ld-linux-x86-64.so.2 -o cmTC_4bdf8 /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crt1.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crti.o /usr/lib/gcc/x86_64-redhat-linux/11/crtbegin.o -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/usr/lib/gcc/x86_64-redhat-linux/11 -L/usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64 -L/lib/../lib64 -L/usr/lib/../lib64 -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L. -L/usr/lib/gcc/x86_64-redhat-linux/11/../../.. -lhdf5 -lgsl -lgslcblas -lfftw3 -v CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o -lstdc++ -lm -lgcc_s -lgcc -lc -lgcc_s -lgcc /usr/lib/gcc/x86_64-redhat-linux/11/crtend.o /usr/lib/gcc/x86_64-redhat-linux/11/../../../../lib64/crtn.o
+        GNU ld (GNU Binutils) 2.43
+        /home/biasissi/miniconda/envs/main/bin/ld: warning: libz.so.1, needed by /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so, not found (try using -rpath or -rpath-link)
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `compress2'
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `inflate'
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `inflateInit_'
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `inflateEnd'
+        collect2: error: ld returned 1 exit status
+        /usr/bin/c++ -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I/  -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -lhdf5 -lgsl -lgslcblas -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -lfftw3 -v -Wl,-v CMakeFiles/cmTC_4bdf8.dir/CMakeCXXCompilerABI.cpp.o -o cmTC_4bdf8
+        gmake[1]: *** [CMakeFiles/cmTC_4bdf8.dir/build.make:102: cmTC_4bdf8] Error 1
+        gmake[1]: Leaving directory '/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-f1bV4O'
+        gmake: *** [Makefile:134: cmTC_4bdf8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/home/biasissi/miniconda/envs/main/share/cmake-4.0/Modules/CMakeTestCXXCompiler.cmake:56 (try_compile)"
+      - "CMakeLists.txt:6 (project)"
+    checks:
+      - "Check for working CXX compiler: /usr/bin/c++"
+    directories:
+      source: "/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-1d1vjv"
+      binary: "/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-1d1vjv"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: "-I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I/"
+      CMAKE_CXX_SCAN_FOR_MODULES: "OFF"
+      CMAKE_EXE_LINKER_FLAGS: "-L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -lhdf5 -lgsl -lgslcblas -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -lfftw3"
+    buildResult:
+      variable: "CMAKE_CXX_COMPILER_WORKS"
+      cached: true
+      stdout: |
+        Change Dir: '/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-1d1vjv'
+        
+        Run Build Command(s): /home/biasissi/miniconda/envs/main/bin/cmake -E env VERBOSE=1 /usr/bin/gmake -f Makefile cmTC_0f4b7/fast
+        /usr/bin/gmake  -f CMakeFiles/cmTC_0f4b7.dir/build.make CMakeFiles/cmTC_0f4b7.dir/build
+        gmake[1]: Entering directory '/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-1d1vjv'
+        Building CXX object CMakeFiles/cmTC_0f4b7.dir/testCXXCompiler.cxx.o
+        /usr/bin/c++   -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I/  -o CMakeFiles/cmTC_0f4b7.dir/testCXXCompiler.cxx.o -c /data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-1d1vjv/testCXXCompiler.cxx
+        Linking CXX executable cmTC_0f4b7
+        /home/biasissi/miniconda/envs/main/bin/cmake -E cmake_link_script CMakeFiles/cmTC_0f4b7.dir/link.txt --verbose=1
+        /home/biasissi/miniconda/envs/main/bin/ld: warning: libz.so.1, needed by /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so, not found (try using -rpath or -rpath-link)
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `compress2'
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `inflate'
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `inflateInit_'
+        /home/biasissi/miniconda/envs/main/bin/ld: /data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib/libhdf5.so: undefined reference to `inflateEnd'
+        collect2: error: ld returned 1 exit status
+        /usr/bin/c++ -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -I/  -L/data0/biasissi/Scientific_Computing/my_libraries/hdf5/lib -L/data0/biasissi/Scientific_Computing/my_libraries/gsl/lib -lhdf5 -lgsl -lgslcblas -L/data0/biasissi/Scientific_Computing/my_libraries/fftw3/lib -lfftw3  CMakeFiles/cmTC_0f4b7.dir/testCXXCompiler.cxx.o -o cmTC_0f4b7
+        gmake[1]: *** [CMakeFiles/cmTC_0f4b7.dir/build.make:102: cmTC_0f4b7] Error 1
+        gmake[1]: Leaving directory '/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles/CMakeScratch/TryCompile-1d1vjv'
+        gmake: *** [Makefile:134: cmTC_0f4b7/fast] Error 2
+        
+      exitCode: 2
+...

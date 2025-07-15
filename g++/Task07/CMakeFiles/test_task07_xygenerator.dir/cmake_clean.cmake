@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/test_task07_xygenerator.dir/link.d"
   "CMakeFiles/test_task07_xygenerator.dir/task07_xygenerator.cpp.o"
   "CMakeFiles/test_task07_xygenerator.dir/task07_xygenerator.cpp.o.d"
   "CMakeFiles/test_task07_xygenerator.dir/test_task07_xygenerator.cpp.o"

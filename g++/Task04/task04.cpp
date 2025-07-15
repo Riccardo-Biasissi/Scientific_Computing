@@ -91,7 +91,7 @@ double compute_integral_simpson(double x_inf, double x_sup, int N) {
 
 // Function to compute the integral of f(x) = e^x * cos(x) using GSL
 double compute_integral_gaussian(double x_inf, double x_sup) {
-    gsl_integration_workspace* workspace = gsl_integration_workspace_alloc(1000); // GSL requires a workspace
+    gsl_integration_workspace* workspace = gsl_integration_workspace_alloc(1000); // GSL requires a workspace, 1000 is the size of the subdivisions in the integration interval
 
     double result, error; // Define variables for result and error
 

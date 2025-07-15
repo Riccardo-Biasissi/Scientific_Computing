@@ -292,7 +292,7 @@ std::vector<std::vector<double>> perform_c2r_IFFT2D(const std::vector<std::vecto
 
 int main() {
     // Define the size of the matrix (NxN)
-    int N = 1000;
+    int N = 100;
     // Generate a random NxN matrix
     std::vector<std::vector<double>> A = generateRandomMatrix(N);
 
