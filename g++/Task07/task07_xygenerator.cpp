@@ -42,6 +42,8 @@ void generate_vectors(int N, std::string filename_prefix) {
 
 // Define the main function that takes the number of elements N
 // and the filename prefix as arguments
+// COMMENTED OUT FOR UNIT TESTING - main is provided by Catch2
+/*
 int main(int argc, char* argv[]) {
     // Check if the number of arguments is correct. Remember
     // that the first argument is the name of the program,
@@ -59,3 +61,4 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+*/

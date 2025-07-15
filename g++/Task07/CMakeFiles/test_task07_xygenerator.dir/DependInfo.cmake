@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/data0/biasissi/Scientific_Computing/g++/Task07/catch_amalgamated.cpp" "CMakeFiles/test_task07_xygenerator.dir/catch_amalgamated.cpp.o" "gcc" "CMakeFiles/test_task07_xygenerator.dir/catch_amalgamated.cpp.o.d"
   "/data0/biasissi/Scientific_Computing/g++/Task07/task07_xygenerator.cpp" "CMakeFiles/test_task07_xygenerator.dir/task07_xygenerator.cpp.o" "gcc" "CMakeFiles/test_task07_xygenerator.dir/task07_xygenerator.cpp.o.d"
   "/data0/biasissi/Scientific_Computing/g++/Task07/test_task07_xygenerator.cpp" "CMakeFiles/test_task07_xygenerator.dir/test_task07_xygenerator.cpp.o" "gcc" "CMakeFiles/test_task07_xygenerator.dir/test_task07_xygenerator.cpp.o.d"
   "" "test_task07_xygenerator" "gcc" "CMakeFiles/test_task07_xygenerator.dir/link.d"

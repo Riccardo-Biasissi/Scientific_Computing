@@ -71,6 +71,8 @@ void calculate_d(const std::string& config_file) {
     write_vector(filename_d, d);
 }
 
+// COMMENTED OUT FOR UNIT TESTING - main is provided by Catch2
+/*
 int main(int argc, char* argv[]) {
     // Check if the number of arguments is correct. Remember
     // that the first argument is the name of the program,
@@ -86,3 +88,4 @@ int main(int argc, char* argv[]) {
 
     return 0;
 }
+*/

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/data0/biasissi/Scientific_Computing/g++/Task07/catch_amalgamated.cpp" "CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o" "gcc" "CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o.d"
   "/data0/biasissi/Scientific_Computing/g++/Task07/task07.cpp" "CMakeFiles/test_task07.dir/task07.cpp.o" "gcc" "CMakeFiles/test_task07.dir/task07.cpp.o.d"
   "/data0/biasissi/Scientific_Computing/g++/Task07/test_task07.cpp" "CMakeFiles/test_task07.dir/test_task07.cpp.o" "gcc" "CMakeFiles/test_task07.dir/test_task07.cpp.o.d"
   "" "test_task07" "gcc" "CMakeFiles/test_task07.dir/link.d"

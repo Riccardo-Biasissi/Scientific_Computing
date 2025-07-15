@@ -4,7 +4,7 @@
 # compile CXX with /home/biasissi/miniconda/envs/main/bin/x86_64-conda-linux-gnu-c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /data0/biasissi/Scientific_Computing/my_libraries/catch/include
+CXX_INCLUDES = 
 
-CXX_FLAGS = -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/biasissi/miniconda/envs/main/include -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -fopenmp -I//data0/biasissi/Scientific_Computing/my_libraries/openmpi/include
+CXX_FLAGS = -fvisibility-inlines-hidden -fmessage-length=0 -march=nocona -mtune=haswell -ftree-vectorize -fPIC -fstack-protector-strong -fno-plt -O2 -ffunction-sections -pipe -isystem /home/biasissi/miniconda/envs/main/include -I/data0/biasissi/Scientific_Computing/my_libraries/hdf5/include -I/data0/biasissi/Scientific_Computing/my_libraries/gsl/include -I/data0/biasissi/Scientific_Computing/my_libraries/fftw3/include -fopenmp -I//data0/biasissi/Scientific_Computing/my_libraries/openmpi/include -std=gnu++17
 

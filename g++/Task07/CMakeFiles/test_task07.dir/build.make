@@ -72,10 +72,24 @@ include CMakeFiles/test_task07.dir/flags.make
 CMakeFiles/test_task07.dir/codegen:
 .PHONY : CMakeFiles/test_task07.dir/codegen
 
+CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o: CMakeFiles/test_task07.dir/flags.make
+CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o: catch_amalgamated.cpp
+CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o: CMakeFiles/test_task07.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o"
+	/home/biasissi/miniconda/envs/main/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o -MF CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o.d -o CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o -c /data0/biasissi/Scientific_Computing/g++/Task07/catch_amalgamated.cpp
+
+CMakeFiles/test_task07.dir/catch_amalgamated.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/test_task07.dir/catch_amalgamated.cpp.i"
+	/home/biasissi/miniconda/envs/main/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /data0/biasissi/Scientific_Computing/g++/Task07/catch_amalgamated.cpp > CMakeFiles/test_task07.dir/catch_amalgamated.cpp.i
+
+CMakeFiles/test_task07.dir/catch_amalgamated.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/test_task07.dir/catch_amalgamated.cpp.s"
+	/home/biasissi/miniconda/envs/main/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /data0/biasissi/Scientific_Computing/g++/Task07/catch_amalgamated.cpp -o CMakeFiles/test_task07.dir/catch_amalgamated.cpp.s
+
 CMakeFiles/test_task07.dir/test_task07.cpp.o: CMakeFiles/test_task07.dir/flags.make
 CMakeFiles/test_task07.dir/test_task07.cpp.o: test_task07.cpp
 CMakeFiles/test_task07.dir/test_task07.cpp.o: CMakeFiles/test_task07.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/test_task07.dir/test_task07.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_task07.dir/test_task07.cpp.o"
 	/home/biasissi/miniconda/envs/main/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_task07.dir/test_task07.cpp.o -MF CMakeFiles/test_task07.dir/test_task07.cpp.o.d -o CMakeFiles/test_task07.dir/test_task07.cpp.o -c /data0/biasissi/Scientific_Computing/g++/Task07/test_task07.cpp
 
 CMakeFiles/test_task07.dir/test_task07.cpp.i: cmake_force
@@ -89,7 +103,7 @@ CMakeFiles/test_task07.dir/test_task07.cpp.s: cmake_force
 CMakeFiles/test_task07.dir/task07.cpp.o: CMakeFiles/test_task07.dir/flags.make
 CMakeFiles/test_task07.dir/task07.cpp.o: task07.cpp
 CMakeFiles/test_task07.dir/task07.cpp.o: CMakeFiles/test_task07.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/test_task07.dir/task07.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/test_task07.dir/task07.cpp.o"
 	/home/biasissi/miniconda/envs/main/bin/x86_64-conda-linux-gnu-c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/test_task07.dir/task07.cpp.o -MF CMakeFiles/test_task07.dir/task07.cpp.o.d -o CMakeFiles/test_task07.dir/task07.cpp.o -c /data0/biasissi/Scientific_Computing/g++/Task07/task07.cpp
 
 CMakeFiles/test_task07.dir/task07.cpp.i: cmake_force
@@ -102,20 +116,20 @@ CMakeFiles/test_task07.dir/task07.cpp.s: cmake_force
 
 # Object files for target test_task07
 test_task07_OBJECTS = \
+"CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o" \
 "CMakeFiles/test_task07.dir/test_task07.cpp.o" \
 "CMakeFiles/test_task07.dir/task07.cpp.o"
 
 # External object files for target test_task07
 test_task07_EXTERNAL_OBJECTS =
 
+test_task07: CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o
 test_task07: CMakeFiles/test_task07.dir/test_task07.cpp.o
 test_task07: CMakeFiles/test_task07.dir/task07.cpp.o
 test_task07: CMakeFiles/test_task07.dir/build.make
 test_task07: CMakeFiles/test_task07.dir/compiler_depend.ts
-test_task07: /data0/biasissi/Scientific_Computing/my_libraries/catch/lib64/libCatch2Main.a
-test_task07: /data0/biasissi/Scientific_Computing/my_libraries/catch/lib64/libCatch2.a
 test_task07: CMakeFiles/test_task07.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable test_task07"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/data0/biasissi/Scientific_Computing/g++/Task07/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable test_task07"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/test_task07.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

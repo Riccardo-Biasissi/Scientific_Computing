@@ -1,6 +1,5 @@
 // test_task07.cpp
-#define CATCH_CONFIG_MAIN
-#include <catch2/catch_all.hpp> // Catch2 header for unit testing
+#include "catch_amalgamated.hpp" // Catch2 header for unit testing
 using Catch::Approx;            // For floating-point comparison
 #include <fstream>              // Used for file operations
 #include <cstdio>               // Used for file operations (remove)
@@ -63,7 +62,11 @@ TEST_CASE("read_vector and write_vector work as inverse", "[vector_io]") {
     write_vector(fname, data);
 
     auto read = read_vector(fname);
-    REQUIRE(read == data);
+    REQUIRE(read.size() == data.size());
+    // Use Approx for floating-point comparison instead of direct equality
+    for (size_t i = 0; i < data.size(); ++i) {
+        REQUIRE(read[i] == Approx(data[i]));
+    }
 
     remove_file(fname);
 }

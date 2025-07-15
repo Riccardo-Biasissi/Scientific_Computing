@@ -1,5 +1,4 @@
-#define CATCH_CONFIG_MAIN
-#include <catch2/catch_all.hpp> // Catch2 header for unit testing
+#include "catch_amalgamated.hpp" // Catch2 header for unit testing
 #include <fstream>              // Used for file operations
 #include <cstdio>               // Used for file operations (remove)
 #include <string>               // Used for strings

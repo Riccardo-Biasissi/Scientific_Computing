@@ -142,6 +142,33 @@ test_task07/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task07.dir/build.make CMakeFiles/test_task07.dir/build
 .PHONY : test_task07/fast
 
+catch_amalgamated.o: catch_amalgamated.cpp.o
+.PHONY : catch_amalgamated.o
+
+# target to build an object file
+catch_amalgamated.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task07_xygenerator.dir/build.make CMakeFiles/test_task07_xygenerator.dir/catch_amalgamated.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task07.dir/build.make CMakeFiles/test_task07.dir/catch_amalgamated.cpp.o
+.PHONY : catch_amalgamated.cpp.o
+
+catch_amalgamated.i: catch_amalgamated.cpp.i
+.PHONY : catch_amalgamated.i
+
+# target to preprocess a source file
+catch_amalgamated.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task07_xygenerator.dir/build.make CMakeFiles/test_task07_xygenerator.dir/catch_amalgamated.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task07.dir/build.make CMakeFiles/test_task07.dir/catch_amalgamated.cpp.i
+.PHONY : catch_amalgamated.cpp.i
+
+catch_amalgamated.s: catch_amalgamated.cpp.s
+.PHONY : catch_amalgamated.s
+
+# target to generate assembly for a file
+catch_amalgamated.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task07_xygenerator.dir/build.make CMakeFiles/test_task07_xygenerator.dir/catch_amalgamated.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task07.dir/build.make CMakeFiles/test_task07.dir/catch_amalgamated.cpp.s
+.PHONY : catch_amalgamated.cpp.s
+
 task07.o: task07.cpp.o
 .PHONY : task07.o
 
@@ -248,6 +275,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test_task07"
 	@echo "... test_task07_xygenerator"
+	@echo "... catch_amalgamated.o"
+	@echo "... catch_amalgamated.i"
+	@echo "... catch_amalgamated.s"
 	@echo "... task07.o"
 	@echo "... task07.i"
 	@echo "... task07.s"
