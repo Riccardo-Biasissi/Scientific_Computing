@@ -10,7 +10,7 @@ echo ""
 
 # Test different vector sizes
 SIZES=(10000 100000 1000000)
-CHUNKSIZE=1000
+CHUNKSIZE=10000
 
 echo "System Information:"
 echo "CPU cores: $(nproc)"
