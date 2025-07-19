@@ -68,5 +68,6 @@
         "stop_token": "cpp",
         "thread": "cpp",
         "variant": "cpp"
-    }
+    },
+    "cmake.sourceDirectory": "/data0/biasissi/Scientific_Computing/g++/Task07"
 }

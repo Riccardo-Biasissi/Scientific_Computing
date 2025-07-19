@@ -10,8 +10,8 @@ echo ""
 
 # Test different vector sizes and process counts
 SIZES=(10000 100000 1000000)
-PROCESSES=(8)
-CHUNKSIZE=1000
+PROCESSES=(2, 4, 6, 8, 12)
+CHUNKSIZE=10000
 
 echo "System Information:"
 echo "CPU cores: $(nproc)"
